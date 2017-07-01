@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fwani.tutorial2.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/number1"
+            android:layout_width="358dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="첫 번째 숫자"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <EditText
+            android:id="@+id/number2"
+            android:layout_width="354dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/number1"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="두 번째 숫자"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/number2"
+            android:layout_below="@+id/number2"
+            android:layout_marginTop="18dp"
+            android:text="더하기"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="124dp"
+            android:onClick="addClick"/>
+
+        <Button
+            android:id="@+id/subButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/addButton"
+            android:layout_alignBottom="@+id/addButton"
+            android:layout_toEndOf="@+id/addButton"
+            android:text="빼기"
+            tools:layout_editor_absoluteX="104dp"
+            tools:layout_editor_absoluteY="124dp"
+            android:onClick="subClick"/>
+
+        <Button
+            android:id="@+id/multButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/subButton"
+            android:layout_alignBottom="@+id/subButton"
+            android:layout_toStartOf="@+id/divButton"
+            android:text="곱하기"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="124dp"
+            android:onClick="multClick"/>
+
+        <Button
+            android:id="@+id/divButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/multButton"
+            android:layout_alignBottom="@+id/multButton"
+            android:layout_alignEnd="@+id/number2"
+            android:text="나누기"
+            tools:layout_editor_absoluteX="280dp"
+            tools:layout_editor_absoluteY="124dp"
+            android:onClick="divClick"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/number1"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/addButton"
+            android:layout_marginTop="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
